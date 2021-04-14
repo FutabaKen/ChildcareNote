@@ -657,8 +657,8 @@
                                                 <constraint>
                                                   <height>39</height>
                                                   <width>130</width>
-                                                  <x>219</x>
-                                                  <y>257</y>
+                                                  <x>222</x>
+                                                  <y>282</y>
                                                 </constraint>
                                                 <sourceConnections>
                                                   <net.java.amateras.uml.usecasediagram.model.UsecaseIncludeModel reference="../../.."/>
@@ -875,8 +875,8 @@
                         <constraint>
                           <height>40</height>
                           <width>100</width>
-                          <x>161</x>
-                          <y>91</y>
+                          <x>154</x>
+                          <y>107</y>
                         </constraint>
                         <sourceConnections/>
                         <targetConnections>
