@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
   res.render('index.ejs');
 });
 
+app.get('/menu', (req, res) => {
+  res.render('menu.ejs');
+});
+
 app.get('/noteList', (req, res) => {
   res.render('noteList.ejs');
 });
