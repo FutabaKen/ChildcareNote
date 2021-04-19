@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "bootstrap-icons": "^1.4.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "jquery": "^3.6.0",
@@ -20,5 +21,13 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FutabaKen/ChildcareNote.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FutabaKen/ChildcareNote/issues"
+  },
+  "homepage": "https://github.com/FutabaKen/ChildcareNote#readme",
   "description": ""
 }
