@@ -1,6 +1,9 @@
 const express = require('express');
 // MySQLを使うためのコードを貼り付けてください
 const mysql = require('mysql');
+const jquery = require('jquery');
+const hogan = require("hogan.js");
+
 
 const app = express();
 

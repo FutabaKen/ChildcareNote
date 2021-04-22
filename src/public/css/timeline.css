@@ -1,0 +1,12 @@
+.meeting{
+    background-color: rgba(255, 188, 0, 0.3);
+}
+.nonsense{
+    background-color: rgba(255, 18, 0, 0.3);
+}
+.racing{
+    background-color: rgba(0, 79, 255, 0.3);
+}
+#scheduler{
+    border: 1px solid #e7e7e7;
+}
