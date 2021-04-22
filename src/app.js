@@ -25,4 +25,8 @@ app.get('/noteList', (req, res) => {
   res.render('noteList.ejs');
 });
 
+app.get('/noteDaily', (req, res) => {
+  res.render('noteDaily.ejs');
+});
+
 app.listen(3000);
