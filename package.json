@@ -12,6 +12,7 @@
     "express": "^4.17.1",
     "hogan.js": "github:twitter/hogan.js",
     "jquery": "^3.6.0",
+    "jquery-ui": "^1.12.1",
     "jsdom": "^16.5.2",
     "mysql": "^2.18.1",
     "popper.js": "^1.16.1"

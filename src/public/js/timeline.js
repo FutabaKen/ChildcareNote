@@ -10,6 +10,9 @@ $(function(){
     ];
 
     var steps = [
+        '18:00',
+        '20:00',
+        '22:00',
         '00:00',
         '02:00',
         '04:00',
@@ -19,7 +22,7 @@ $(function(){
         '12:00',
         '14:00',
         '16:00',
-        '18:00'
+        '17:59'
     ];
 
     var onClickAppointment = function(payload){
@@ -29,16 +32,16 @@ $(function(){
     var $scheduler = $("#scheduler").schedulerjs({
         'list': list,
         'steps': steps,
-        'pixelsPerHour': 30,
-        'start': '09:30',
-        'end': '10:30',
+        'pixelsPerHour': 40,
+        'start': '15:30',
+        'end': '16:30',
         'headName': 'Members',
         'onClickAppointment': onClickAppointment
     });
 
     // Change time after initialization
-    $scheduler.schedulerjs('start', '11:00');
-    $scheduler.schedulerjs('end', '11:30');
+    // $scheduler.schedulerjs('start', '11:00');
+    // $scheduler.schedulerjs('end', '11:30');
 
     $("#times-button").on('click', function(){
         var times = $scheduler.schedulerjs('selected');

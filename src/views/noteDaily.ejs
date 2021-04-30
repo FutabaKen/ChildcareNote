@@ -7,7 +7,10 @@
 	<title>Insert title here</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/mint-choc/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="jquery/style.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js" integrity="sha512-F6j8lc1UBrmZHqUGreg4gNVVMCehTbf/LU0s/nnsQJYVeFSdpci+fcL48gsTd1Fbf08sD/kL+is2QiEssvJ70g==" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="js/scheduler.css">
 	<script src="js/scheduler.js"></script>
@@ -37,23 +40,69 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="container">
-						<h3>Welcome to the scheduler test page</h3>
-						<div id="scheduler"></div>
+					<div id="scheduler"></div>
+					<!-- いったんコメント化
 						<h3>Selected times</h3>
 						<button id="times-button" class="btn btn-default">Get selected times</button>
 						<div id="times"></div>
 						<h3>Callback on appointment click</h3>
-						<pre id="onClickAppointment"></pre>
-					</div>
+						<pre id="onClickAppointment"></pre> -->
+					<!-- 削除予定
+						<div id="schedule"></div>
+						<script type="text/javascript" src="jquery/jq.schedule.min.js"></script>
+						<script type="text/javascript" src="js/timeline2.js"></script>
+						-->
 				</div>
 			</div>
 			<div class="row">
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">With textarea</span>
-					</div>
-					<textarea class="form-control" aria-label="With textarea"></textarea>
+				<div class="col-md-12 mt-5">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th></th>
+								<th>家庭より</th>
+								<th>園より</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>排便</th>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>検温</th>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>機嫌</th>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>食事</th>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>連絡事項</th>
+								<td class="p-0 h-100">
+									<textarea class="form-control"></textarea>
+								</td>
+								<td class="p-0 h-100">
+									<textarea class="form-control"></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="container btn-area pb-2">
+			<div class="row">
+				<div class="col">
+					<button type="button" class="btn btn-primary float-right">保存</button>
 				</div>
 			</div>
 		</div>

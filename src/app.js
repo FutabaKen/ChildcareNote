@@ -4,7 +4,6 @@ const mysql = require('mysql');
 const jquery = require('jquery');
 const hogan = require("hogan.js");
 
-
 const app = express();
 
 app.use(express.static('public'));
