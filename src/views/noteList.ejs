@@ -14,213 +14,41 @@
 <body>
 	<%- include('header'); %>
 		<div class="container">
-			<div class="row py-2">
-				<div class="col-md-6">
-					<div class="monthly pb-2">
-						<div class="current-month" id="first-current-month">
-							<ul class="calendar-header p-0 m-0 text-center">
-								<li class="prev d-inline-flex">
-									<button class="btn-sm btn-light" type="button" id="first-btn-prev">
-										<i class="bi bi-chevron-double-left"></i>
-									</button>
-								</li>
-								<li class="year form-group d-inline-flex m-0" id="first-year"></li>
-								<li class="month form-group d-inline-flex m-0" id="first-month"></li>
-								<li class="next d-inline-flex">
-									<button class="btn-sm btn-light" type="button" id="first-btn-next">
-										<i class="bi bi-chevron-double-right"></i>
-									</button>
-								</li>
-							</ul>
-						</div>
+			<!-- カレンダーの実装はjavascript -->
+			<div class="row py-2" id="calendar-area"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">date</th>
+									<th scope="col">LastUpdate</th>
+									<th scope="col">Parents</th>
+									<th scope="col">Childminder</th>
+									<th scope="col">delete</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row"><a href="#">2021-04-01(Thu.)</a></th>
+									<td>2021-04-01 15:23</td>
+									<td>母</td>
+									<td>村井</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="checkDelete">
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
-					<table class="table-sm table-bordered" id="first-month">
-						<thead>
-							<tr class="week">
-								<th class="sun">Sun.</th>
-								<th class="mon">Mon.</th>
-								<th class="tue">Tue.</th>
-								<th class="wed">Wed.</th>
-								<th class="thu">Thu.</th>
-								<th class="fri">Fri.</th>
-								<th class="sat">Sat.</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="week">
-								<td class="day" id="first-calendar-0"></td>
-								<td class="day" id="first-calendar-1"></td>
-								<td class="day" id="first-calendar-2"></td>
-								<td class="day" id="first-calendar-3"></td>
-								<td class="day" id="first-calendar-4"></td>
-								<td class="day" id="first-calendar-5"></td>
-								<td class="day" id="first-calendar-6"></td>
-							</tr>
-							<tr class="week">
-								<td class="day" id="first-calendar-7"></td>
-								<td class="day" id="first-calendar-8"></td>
-								<td class="day" id="first-calendar-9"></td>
-								<td class="day" id="first-calendar-10"></td>
-								<td class="day" id="first-calendar-11"></td>
-								<td class="day" id="first-calendar-12"></td>
-								<td class="day" id="first-calendar-13"></td>
-							</tr>
-							<tr class="week">
-								<td class="day" id="first-calendar-14"></td>
-								<td class="day" id="first-calendar-15"></td>
-								<td class="day" id="first-calendar-16"></td>
-								<td class="day" id="first-calendar-17"></td>
-								<td class="day" id="first-calendar-18"></td>
-								<td class="day" id="first-calendar-19"></td>
-								<td class="day" id="first-calendar-20"></td>
-							</tr>
-							<tr class="week">
-								<td class="day" id="first-calendar-21"></td>
-								<td class="day" id="first-calendar-22"></td>
-								<td class="day" id="first-calendar-23"></td>
-								<td class="day" id="first-calendar-24"></td>
-								<td class="day" id="first-calendar-25"></td>
-								<td class="day" id="first-calendar-26"></td>
-								<td class="day" id="first-calendar-27"></td>
-							</tr>
-							<tr class="week">
-								<td class="day" id="first-calendar-28"></td>
-								<td class="day" id="first-calendar-29"></td>
-								<td class="day" id="first-calendar-30"></td>
-								<td class="day" id="first-calendar-31"></td>
-								<td class="day" id="first-calendar-32"></td>
-								<td class="day" id="first-calendar-33"></td>
-								<td class="day" id="first-calendar-34"></td>
-							</tr>
-							<tr class="week">
-								<td class="day" id="first-calendar-35"></td>
-								<td class="day" id="first-calendar-36"></td>
-								<td class="day" id="first-calendar-37"></td>
-								<td class="day" id="first-calendar-38"></td>
-								<td class="day" id="first-calendar-39"></td>
-								<td class="day" id="first-calendar-40"></td>
-								<td class="day" id="first-calendar-41"></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="col-md-6">
-					<table class="table-sm table-bordered" id="second-month">
-						<thead>
-							<tr class="monthly">
-								<th class="prev">
-									<i class="bi bi-chevron-double-left"></i>
-								</th>
-								<th class="current-month" colspan="5" id="second-current-month">
-									2022-05
-								</th>
-								<th class="next">
-									<i class="bi bi-chevron-double-right"></i>
-								</th>
-							</tr>
-							<tr class="weekly">
-								<th class="sun">Sun.</th>
-								<th class="mon">Mon.</th>
-								<th class="tue">Tue.</th>
-								<th class="wed">Wed.</th>
-								<th class="thu">Thu.</th>
-								<th class="fri">Fri.</th>
-								<th class="sat">Sat.</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="week">
-								<td class="day" id="second-calendar-0"></td>
-								<td class="day" id="second-calendar-1"></td>
-								<td class="day" id="second-calendar-2"></td>
-								<td class="day" id="second-calendar-3"></td>
-								<td class="day" id="second-calendar-4"></td>
-								<td class="day" id="second-calendar-5"></td>
-								<td class="day" id="second-calendar-6"></td>
-							</tr>
-							<tr class="week">
-								<td class="day" id="second-calendar-7"></td>
-								<td class="day" id="second-calendar-8"></td>
-								<td class="day" id="second-calendar-9"></td>
-								<td class="day" id="second-calendar-10"></td>
-								<td class="day" id="second-calendar-11"></td>
-								<td class="day" id="second-calendar-12"></td>
-								<td class="day" id="second-calendar-13"></td>
-							</tr>
-							<tr class="week">
-								<td class="day" id="second-calendar-14"></td>
-								<td class="day" id="second-calendar-15"></td>
-								<td class="day" id="second-calendar-16"></td>
-								<td class="day" id="second-calendar-17"></td>
-								<td class="day" id="second-calendar-18"></td>
-								<td class="day" id="second-calendar-19"></td>
-								<td class="day" id="second-calendar-20"></td>
-							</tr>
-							<tr class="week">
-								<td class="day" id="second-calendar-21"></td>
-								<td class="day" id="second-calendar-22"></td>
-								<td class="day" id="second-calendar-23"></td>
-								<td class="day" id="second-calendar-24"></td>
-								<td class="day" id="second-calendar-25"></td>
-								<td class="day" id="second-calendar-26"></td>
-								<td class="day" id="second-calendar-27"></td>
-							</tr>
-							<tr class="week">
-								<td class="day" id="second-calendar-28"></td>
-								<td class="day" id="second-calendar-29"></td>
-								<td class="day" id="second-calendar-30"></td>
-								<td class="day" id="second-calendar-31"></td>
-								<td class="day" id="second-calendar-32"></td>
-								<td class="day" id="second-calendar-33"></td>
-								<td class="day" id="second-calendar-34"></td>
-							</tr>
-							<tr class="week">
-								<td class="day" id="second-calendar-35"></td>
-								<td class="day" id="second-calendar-36"></td>
-								<td class="day" id="second-calendar-37"></td>
-								<td class="day" id="second-calendar-38"></td>
-								<td class="day" id="second-calendar-39"></td>
-								<td class="day" id="second-calendar-40"></td>
-								<td class="day" id="second-calendar-41"></td>
-							</tr>
-						</tbody>
-					</table>
 				</div>
 			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<table class="table">
-						<thead>
-							<tr>
-								<th scope="col">date</th>
-								<th scope="col">LastUpdate</th>
-								<th scope="col">Parents</th>
-								<th scope="col">Childminder</th>
-								<th scope="col">delete</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row"><a href="#">2021-04-01(Thu.)</a></th>
-								<td>2021-04-01 15:23</td>
-								<td>母</td>
-								<td>村井</td>
-								<td>
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="checkDelete">
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-		<script src="js/calendar.js"></script>
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+			<script src="js/calendar.js"></script>
 </body>
 
 </html>
