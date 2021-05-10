@@ -2,7 +2,7 @@ $(function () {
     /**
      * @type {String} カレンダーの位置（左）
      */
-    const first = '#first-';
+    const first = 'first-';
     /**
      * @type {String} カレンダーの位置（右）
      */
@@ -17,24 +17,32 @@ $(function () {
     const monthNumber = { "jan": 0, "dec": 11 };
     const weekDay = ['Sun.', 'Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri', 'Sat'];
 
+    var addSharp = function(str){
+        return '#' + str;
+    }
+
     $('#first-select-year').on("change", function () {
         addCalendarDate(first);
     })
 
     $('body').on("click", '#first-calendar .prev' + child + 'button', function () {
+        deleteCalendar(first);
         changeMonth(first, -1);
     })
 
     $('body').on("click", '#first-calendar .next' + child + 'button', function () {
+        deleteCalendar(first);
         changeMonth(first, 1);
     })
 
     $('body').on("change", '#first-calendar' + space + '.select-year', function () {
+        deleteCalendar(first);
         addCalendarDate(first);
         disabledButton(first);
     })
 
     $('body').on("change", '#first-calendar' + space + '.select-month', function () {
+        deleteCalendar(first);
         addCalendarDate(first);
         disabledButton(first);
     })
@@ -43,7 +51,7 @@ $(function () {
     // カレンダーのヘッダー
     var createCalendarHeader = function (position, pStartYear) {
         var year = pStartYear;
-        const calendar = position + 'calendar';
+        const calendar = addSharp(position) + 'calendar';
         $("<div>", {
             id: 'first-calendar',
             class: 'col-md-6'
@@ -102,15 +110,13 @@ $(function () {
         }).appendTo(calendar + space + '.next > button');
     }
 
-
-
     /**
      * セレクトボックスのカレンダーの年月を返す
      * @param {String} position カレンダーの位置
      * @returns jsonオブジェクト
      */
     var getCurrentMonth = function (position) {
-        const calender = position + 'calendar';
+        const calender = addSharp(position) + 'calendar';
         return {
             "year": $(calender + space + '.select-year').val(),
             "month": $(calender + space + '.select-month').val()
@@ -119,7 +125,7 @@ $(function () {
 
     // ボタンの無効化
     var disabledButton = function (position) {
-        const calender = position + 'calendar';
+        const calender = addSharp(position) + 'calendar';
         const objYM = getCurrentMonth(position);
         var $btnNext = $(calender + space + '.next' + child + 'button');
         var $btnPrev = $(calender + space + '.prev' + child + 'button');
@@ -139,7 +145,9 @@ $(function () {
      * @param {Number} addMonth 現在の月から加減する月数
      */
     var changeMonth = function (position, addMonth) {
+        alert('a');
         const objYM = getCurrentMonth(position);
+        const calendar = addSharp(position) + 'calendar';
 
         var month = Number(objYM.month) + addMonth;
         var year = objYM.year;
@@ -152,8 +160,12 @@ $(function () {
             month = monthNumber.jan;
             year++;
         }
-        $(position + 'calendar .select-year').val(year);
-        $(position + 'calendar .select-month').val(month);
+        createCalendarHeader(position, startYear);
+        alert(calendar + ' .select-year');
+        alert($(calendar + ' .select-year').val());
+        $(calendar + ' .select-year').val(year);
+        alert($(calendar + ' .select-year').val());
+        $(calendar + ' .select-month').val(month).text(month+1);
         disabledButton(position);
         addCalendarDate(position);
         //addCalendarDate(right);
@@ -172,13 +184,13 @@ $(function () {
         var currentMonthEndDate = new Date(objYM.year, objYM.month + 1, 0);
         var monthStartWeekDay = currentMonth.getDay();
 
-        const calendar = position + 'calendar';
-        const side = position.split('#');
+        const calendar = addSharp(position) + 'calendar';
+        const side = position + 'calendar';
 
         // カレンダーtableの作成
         $("<table>", {
             class: 'table-sm table-bordered',
-            id: side[1] + 'month'
+            id: side
         }).appendTo(calendar);
 
         // tableのヘッダー作成
@@ -207,7 +219,8 @@ $(function () {
             for (var j = 0; j < 7; j++) {
                 var monthDate = new Date(objYM.year, objYM.month, currentMonth.getDate() + cellNumber - monthStartWeekDay);
                 //var calendarDate = calendar + '-' + i;
-                var calendarDate = 'first-calendar' + '-' + cellNumber;
+                //var calendarDate = 'first-calendar' + '-' + cellNumber;
+                var calendarDate = side + cellNumber;
                 var monthClass = 'current-month';
                 if ((monthStartWeekDay - cellNumber) > 0) {
                     monthClass = 'prev-month';
@@ -232,7 +245,7 @@ $(function () {
     }
 
     var deleteCalendar = function (position) {
-        const calendar = position + 'calendar';
+        const calendar = addSharp(position) + 'calendar';
         // いったんカレンダーを削除
         if ($(calendar).length != 0) {
             $(calendar).remove();
