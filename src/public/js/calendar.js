@@ -145,7 +145,6 @@ $(function () {
      * @param {Number} addMonth 現在の月から加減する月数
      */
     var changeMonth = function (position, addMonth) {
-        alert('a');
         const objYM = getCurrentMonth(position);
         const calendar = addSharp(position) + 'calendar';
 
@@ -160,12 +159,8 @@ $(function () {
             month = monthNumber.jan;
             year++;
         }
-        createCalendarHeader(position, startYear);
-        alert(calendar + ' .select-year');
-        alert($(calendar + ' .select-year').val());
         $(calendar + ' .select-year').val(year);
-        alert($(calendar + ' .select-year').val());
-        $(calendar + ' .select-month').val(month).text(month+1);
+        $(calendar + ' .select-month').val(month);
         disabledButton(position);
         addCalendarDate(position);
         //addCalendarDate(right);
@@ -181,11 +176,11 @@ $(function () {
         var currentMonth = new Date(objYM.year, objYM.month);
 
         // 月末日を検索
-        var currentMonthEndDate = new Date(objYM.year, objYM.month + 1, 0);
+        var currentMonthEndDate = new Date(objYM.year, Number(objYM.month) + 1, 0);
         var monthStartWeekDay = currentMonth.getDay();
 
         const calendar = addSharp(position) + 'calendar';
-        const side = position + 'calendar';
+        const side = position + 'calendar-body';
 
         // カレンダーtableの作成
         $("<table>", {
@@ -209,7 +204,7 @@ $(function () {
         $("<tbody>").appendTo(calendar + ' table');
         // 週のループ
         var cellNumber = 0;
-        for (var i = 0; i < 7; i++) {
+        for (var i = 0; i < 6; i++) {
 
             // 週の追加
             $("<tr>", {
@@ -218,9 +213,7 @@ $(function () {
 
             for (var j = 0; j < 7; j++) {
                 var monthDate = new Date(objYM.year, objYM.month, currentMonth.getDate() + cellNumber - monthStartWeekDay);
-                //var calendarDate = calendar + '-' + i;
-                //var calendarDate = 'first-calendar' + '-' + cellNumber;
-                var calendarDate = side + cellNumber;
+                var calendarDate = side + '-' + cellNumber;
                 var monthClass = 'current-month';
                 if ((monthStartWeekDay - cellNumber) > 0) {
                     monthClass = 'prev-month';
@@ -245,7 +238,7 @@ $(function () {
     }
 
     var deleteCalendar = function (position) {
-        const calendar = addSharp(position) + 'calendar';
+        const calendar = addSharp(position) + 'calendar-body';
         // いったんカレンダーを削除
         if ($(calendar).length != 0) {
             $(calendar).remove();
