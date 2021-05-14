@@ -1,10 +1,10 @@
-$(function(){
+$(function () {
     var list = [
         {
             'name': '睡眠・他',
             'appointments': [
-                {'start': '08:00', 'end': '09:00', 'title': 'Make strange noises',             'class': 'nonsense', 'payload': {myId: 1}},
-                {'start': '08:50', 'end': '10:10', 'title': 'Somehow Han Solo understands me', 'class': 'nonsense', 'payload': {myId: 2}}
+                { 'start': '08:00', 'end': '09:00', 'title': 'Make strange noises', 'class': 'nonsense', 'payload': { myId: 1 } },
+                { 'start': '08:50', 'end': '10:10', 'title': 'Somehow Han Solo understands me', 'class': 'nonsense', 'payload': { myId: 2 } }
             ]
         }
     ];
@@ -25,7 +25,7 @@ $(function(){
         '17:59'
     ];
 
-    var onClickAppointment = function(payload){
+    var onClickAppointment = function (payload) {
         $("#onClickAppointment").html(JSON.stringify(payload));
     };
 
@@ -43,7 +43,7 @@ $(function(){
     // $scheduler.schedulerjs('start', '11:00');
     // $scheduler.schedulerjs('end', '11:30');
 
-    $("#times-button").on('click', function(){
+    $("#times-button").on('click', function () {
         var times = $scheduler.schedulerjs('selected');
         $("#times").html(times.start + ' - ' + times.end);
     });

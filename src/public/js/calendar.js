@@ -17,7 +17,7 @@ $(function () {
     const monthNumber = { "jan": 0, "dec": 11 };
     const weekDay = ['Sun.', 'Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri', 'Sat'];
 
-    var addSharp = function(str){
+    var addSharp = function (str) {
         return '#' + str;
     }
 
