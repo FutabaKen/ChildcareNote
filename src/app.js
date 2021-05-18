@@ -7,7 +7,7 @@ const hogan = require("hogan.js");
 const app = express();
 
 app.use(express.static('public'));
-const dbconnection = require('./public/json/dbconnect.json');
+const dbconnection = require('./public/json/dbcon.json');
 // 定数connectionを定義して接続情報の書かれたコードを代入してください
 const connection = mysql.createConnection({
   host: dbconnection.host,
