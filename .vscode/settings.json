@@ -15,5 +15,13 @@
         "titleBar.inactiveBackground": "#dd053199",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#dd0531"
+    "peacock.color": "#dd0531",
+    "liveSassCompile.settings.formats": [
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/src/public/css/"
+        }
+    ]
 }
