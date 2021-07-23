@@ -1,0 +1,15 @@
+.menu {
+    &__navbar {
+        background-color: #f8f9fa;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        @media (min-width: 992px) {
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+        }
+    }
+}
