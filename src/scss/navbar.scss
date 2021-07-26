@@ -29,6 +29,9 @@
             display: flex !important;
             flex-basis: auto;
         }
+        &--open {
+            border: 3px solid red;
+        }
     }
     &__nav {
         display: flex;

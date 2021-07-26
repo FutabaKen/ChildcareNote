@@ -46,6 +46,10 @@
   }
 }
 
+.navbar__collapse--open {
+  border: 3px solid red;
+}
+
 .navbar__nav {
   display: -webkit-box;
   display: -ms-flexbox;
