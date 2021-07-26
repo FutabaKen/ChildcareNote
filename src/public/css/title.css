@@ -4,6 +4,10 @@
   margin: 0 auto;
 }
 
+.title__header {
+  text-align: center;
+}
+
 @media (min-width: 1200px) {
   .title {
     max-width: 1140px;
@@ -26,9 +30,5 @@
   .title {
     max-width: 540px;
   }
-}
-
-.title__header {
-  text-align: center;
 }
 /*# sourceMappingURL=title.css.map */

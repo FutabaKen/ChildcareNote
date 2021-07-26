@@ -1,0 +1,33 @@
+%__link {
+    display: block;
+    padding: 0.5rem 0;
+    @media (min-width: 992px) {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+}
+%text-decoration--none {
+    text-decoration: none;
+}
+.nav {
+    &__link {
+        @extend %__link;
+        color: rgba(0,0,0,.5);
+        &:focus {
+            @extend %text-decoration--none;
+        }
+        &:hover {
+            @extend %text-decoration--none;
+        }
+        &--active {
+            @extend %__link;
+            color: rgba(0, 0, 0, 0.9);
+            &:focus {
+                @extend %text-decoration--none;
+            }
+            &:hover {
+                @extend %text-decoration--none;
+            }
+        }
+    }
+}

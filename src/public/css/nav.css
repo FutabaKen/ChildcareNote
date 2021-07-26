@@ -1,0 +1,24 @@
+.nav__link, .nav__link--active {
+  display: block;
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 992px) {
+  .nav__link, .nav__link--active {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+.nav__link:focus, .nav__link:hover, .nav__link--active:focus, .nav__link--active:hover {
+  text-decoration: none;
+}
+
+.nav__link {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nav__link--active {
+  color: rgba(0, 0, 0, 0.9);
+}
+/*# sourceMappingURL=nav.css.map */

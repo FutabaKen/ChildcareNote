@@ -2,6 +2,9 @@
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
+    &__header {
+        text-align: center;
+    }
     @media (min-width: 1200px) {
         max-width: 1140px;
     }
@@ -13,8 +16,5 @@
     }
     @media (min-width: 576px) and (max-width: 767px){
         max-width: 540px;
-    }
-    &__header {
-        text-align: center;
     }
 }
