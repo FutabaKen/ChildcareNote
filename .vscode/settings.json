@@ -21,7 +21,7 @@
         {
             "format": "expanded",
             "extensionName": ".css",
-            "savePath": "/src/public/css/"
+            "savePath": "/public/css/"
         }
     ]
 }
