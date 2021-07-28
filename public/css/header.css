@@ -11,7 +11,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,19 +32,19 @@
   }
 }
 
-.nav__link, .nav__link--active {
+.nav__link, .nav__link--open {
   display: block;
   padding: 0.5rem 0;
 }
 
 @media (min-width: 992px) {
-  .nav__link, .nav__link--active {
+  .nav__link, .nav__link--open {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
 }
 
-.nav__link:focus, .nav__link:hover, .nav__link--active:focus, .nav__link--active:hover {
+.nav__link:focus, .nav__link:hover, .nav__link--open:focus, .nav__link--open:hover {
   text-decoration: none;
 }
 
@@ -53,8 +52,41 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
-.nav__link--active {
+@-webkit-keyframes navShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes navShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nav__link--open {
   color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  -webkit-animation: navShow 1s linear 1s forwards;
+          animation: navShow 1s linear 1s forwards;
+}
+
+.nav__link--open:focus {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.nav__link--open:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar {
+  position: relative;
 }
 
 .navbar__brand {
@@ -93,16 +125,50 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
 }
 
 @media (min-width: 992px) {
-  .navbar__collapse {
+  .navbar__collapse .navbar__collapse, .navbar__collapse .navbar__collapse--open {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
+    height: auto;
+    position: inherit;
   }
+}
+
+@-webkit-keyframes navbarShow {
+  from {
+    height: 0;
+  }
+  to {
+    height: 138px;
+  }
+}
+
+@keyframes navbarShow {
+  from {
+    height: 0;
+  }
+  to {
+    height: 138px;
+  }
+}
+
+.navbar__collapse--open {
+  position: absolute;
+  top: 57px;
+  right: 15px;
+  border: 1px solid lightgray;
+  background: lightgray;
+  border-radius: 4px;
+  z-index: 100;
+  display: block;
+  -webkit-animation: navbarShow 1s linear;
+          animation: navbarShow 1s linear;
 }
 
 .navbar__nav {

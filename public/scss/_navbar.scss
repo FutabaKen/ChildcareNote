@@ -1,4 +1,5 @@
 .navbar {
+    position: relative;
     &__brand {
         color: rgba(0, 0, 0, 0.9);
         display: inline-block;
@@ -22,15 +23,38 @@
         }
     }
     &__collapse {
+        %__lg {
+            @media (min-width: 992px) {
+                display: flex !important;
+                flex-basis: auto;
+                height: auto;
+                position: inherit;
+            }
+        }
+        @keyframes navbarShow {
+            from {
+                height: 0;
+            }
+            to {
+                height: 138px;
+            }
+        }
         flex-basis: 100%;
         flex-grow: 1;
         align-items: center;
-        @media (min-width: 992px) {
-            display: flex !important;
-            flex-basis: auto;
-        }
+        display: none;
+        @extend %__lg;
         &--open {
-            border: 3px solid red;
+            position: absolute;
+            top: 57px;
+            right: 15px;
+            border: 1px solid lightgray;
+            background: lightgray;
+            border-radius: 4px;
+            z-index: 100;
+            display: block;
+            animation: navbarShow 1s linear;
+            @extend %__lg;
         }
     }
     &__nav {
