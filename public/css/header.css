@@ -128,18 +128,6 @@
   display: none;
 }
 
-@media (min-width: 992px) {
-  .navbar__collapse .navbar__collapse, .navbar__collapse .navbar__collapse--open {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    height: auto;
-    position: inherit;
-  }
-}
-
 @-webkit-keyframes navbarShow {
   from {
     height: 0;
@@ -155,6 +143,18 @@
   }
   to {
     height: 138px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar__collapse {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    height: auto;
+    position: relative;
   }
 }
 

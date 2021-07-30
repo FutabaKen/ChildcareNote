@@ -21,7 +21,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "lint": "eslint src"
   },
   "author": "",
   "license": "ISC",
@@ -33,5 +34,12 @@
     "url": "https://github.com/FutabaKen/ChildcareNote/issues"
   },
   "homepage": "https://github.com/FutabaKen/ChildcareNote#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "eslint": "^7.31.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-vue": "^7.14.0"
+  }
 }

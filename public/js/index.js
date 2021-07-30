@@ -1,25 +1,25 @@
 'use strict';
 
-var title__header = new Vue({
+const titleHeader = new Vue({
     el: '#title__header',
     data: {
-        title__header: '乳幼児れんらくノート'
-    }
-})
+        title__header: '乳幼児れんらくノート',
+    },
+});
 
+/**
+ * @method header
+ */
 function header() {
-
-    const body = document.body;
     const btnHamburger = document.getElementById('btnNavbarToggle');
     const navbarNav2 = document.getElementById('navbarNav2');
-    const navlinks = document.querySelectorAll('#navbarNav2 a')
+    const navlinks = document.querySelectorAll('#navbarNav2 a');
 
-    btnHamburger.addEventListener('click', function () {
+    btnHamburger.addEventListener('click', () => {
         navbarNav2.classList.toggle('navbar__collapse--open');
         navbarNav2.classList.toggle('navbar__collapse');
         console.log(navbarNav2);
-        // console.table(navlinks);
-        navlinks.forEach(navlink => {
+        navlinks.forEach((navlink) => {
             console.log(navlink);
             navlink.classList.toggle('nav__link--open');
             navlink.classList.toggle('nav__link');
@@ -27,3 +27,24 @@ function header() {
     });
 }
 header();
+
+/**
+ * @method resizeWindow
+ */
+function resizeWindow() {
+    const navbarNav2 = document.getElementById('navbarNav2');
+    const navlinks = document.querySelectorAll('#navbarNav2 a');
+    if (navbarNav2.className == 'navbar__collapse--open') {
+        navbarNav2.classList.replace(
+            'navbar__collapse--open',
+            'navbar__collapse',
+        );
+        console.log(navbarNav2);
+        navlinks.forEach((navlink) => {
+            console.log(navlink);
+            navlink.classList.replace('nav__link--open', 'nav__link');
+        });
+    }
+}
+
+window.onresize = resizeWindow;

@@ -23,14 +23,6 @@
         }
     }
     &__collapse {
-        %__lg {
-            @media (min-width: 992px) {
-                display: flex !important;
-                flex-basis: auto;
-                height: auto;
-                position: inherit;
-            }
-        }
         @keyframes navbarShow {
             from {
                 height: 0;
@@ -43,7 +35,12 @@
         flex-grow: 1;
         align-items: center;
         display: none;
-        @extend %__lg;
+        @media (min-width: 992px) {
+            display: flex !important;
+            flex-basis: auto;
+            height: auto;
+            position: relative;
+        }
         &--open {
             position: absolute;
             top: 57px;
@@ -54,7 +51,6 @@
             z-index: 100;
             display: block;
             animation: navbarShow 1s linear;
-            @extend %__lg;
         }
     }
     &__nav {
