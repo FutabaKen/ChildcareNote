@@ -1,10 +1,10 @@
 .menu {
     &__navbar {
+        align-items: center;
         background-color: #f8f9fa;
+        display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        display: flex;
-        align-items: center;
         padding: 0.5rem 1rem;
         @media (min-width: 992px) {
             flex-flow: row nowrap;

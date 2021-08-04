@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>れんらくノート</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="../css/bootstrap-reboot.css">
     <link rel="stylesheet" href="../css/header.css">
 </head>
@@ -33,56 +33,31 @@
                                 <a class="nav__link" href="#">Setting</a>
                             </li>
                         </ul>
-                        <!-- <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="bi bi-person-circle"></i></a>
-                            </li>
-                        </ul> -->
                     </div>
                 </nav>
             </div>
         </div>
     </header>
-    <div class="signInArea pb-2 mx-auto">
-        <form>
-            <div class="form-group px-2">
+    <div class="signInArea">
+        <form class="signInArea__form form">
+            <div class="form__group text">
                 <label for="exampleInputEmail12">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail12" aria-describedby="emailHelp2">
-                <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <input type="email" class="text__input" id="exampleInputEmail12" aria-describedby="emailHelp2">
+                <small id="emailHelp2" class="text__desc">We'll never share your email with anyone else.</small>
             </div>
-            <div class="form-group px-2">
+            <div class="form__group text">
                 <label for="exampleInputPassword12">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword12">
+                <input type="password" class="text__input" id="exampleInputPassword12">
             </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck12">
-                <label class="form-check-label" for="exampleCheck12">Check me out</label>
-            </div>
-        </form>
-        <button type="submit" class="btn btn-primary">ログイン</button>
-        <a class="btn btn-primary" href="/menu" role="button">ログイン</a>
-    </div>
-    <div class="container bg-secondary pb-2 mx-auto">
-        <form>
-            <div class="form-group px-2 row">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group px-2 row">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <div class="form__group check">
+                <input type="checkbox" class="check__input" id="exampleCheck12">
+                <label class="check__label" for="exampleCheck12">Check me out</label>
             </div>
         </form>
-        <button type="submit" class="btn btn-primary">ログイン</button>
-        <a class="btn btn-primary" href="/menu" role="button">ログイン</a>
+        <a class="signInArea__button" href="/menu" role="button">ログイン</a>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
     <!-- <script src="js/include.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="js/index.js" defer></script>

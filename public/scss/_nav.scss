@@ -30,9 +30,9 @@
         }
         &--open {
             @extend %__link;
+            animation: navShow 1s linear 1s forwards;
             color: rgba(0, 0, 0, 0.9);
             opacity: 0;
-            animation: navShow 1s linear 1s forwards;
             &:focus {
                 @extend %text-decoration--none;
                 color: rgba(0, 0, 0, 0.7);
