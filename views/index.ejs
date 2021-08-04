@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>れんらくノート</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1 class="title__header" id="title__header">{{title__header}}</h1>
+            <div class="title__menu menu">
+                <nav class="menu__navbar navbar">
+                    <a class="navbar__brand" href="#">Menu</a>
+                    <button id="btnNavbarToggle" class="navbar__toggler" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </button>
+                    <div class="navbar__collapse" id="navbarNav2">
+                        <ul class="navbar__nav margin__right--auto nav">
+                            <li class="nav__item">
+                                <a class="nav__link" href="/menu">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="/noteList">Notes</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">Setting</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="signInArea">
+        <form class="signInArea__form form">
+            <div class="form__group text">
+                <label for="exampleInputEmail12">Email address</label>
+                <input type="email" class="text__input" id="exampleInputEmail12" aria-describedby="emailHelp2">
+                <small id="emailHelp2" class="text__desc">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form__group text">
+                <label for="exampleInputPassword12">Password</label>
+                <input type="password" class="text__input" id="exampleInputPassword12">
+            </div>
+            <div class="form__group check">
+                <input type="checkbox" class="check__input" id="exampleCheck12">
+                <label class="check__label" for="exampleCheck12">Check me out</label>
+            </div>
+        </form>
+        <a class="signInArea__button" href="/menu" role="button">ログイン</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+    <!-- <script src="js/include.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="js/index.js" defer></script>
+</body>
+</html>

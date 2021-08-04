@@ -9,17 +9,20 @@
     "bootstrap": "^4.5.0",
     "bootstrap-icons": "^1.4.1",
     "ejs": "^3.1.6",
+    "eslint-plugin-html": "^6.1.2",
     "express": "^4.17.1",
     "hogan.js": "github:twitter/hogan.js",
     "jquery": "^3.6.0",
     "jquery-ui": "^1.12.1",
     "jsdom": "^16.5.2",
     "mysql": "^2.18.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "vue": "^3.1.5"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "lint": "eslint src"
   },
   "author": "",
   "license": "ISC",
@@ -31,5 +34,12 @@
     "url": "https://github.com/FutabaKen/ChildcareNote/issues"
   },
   "homepage": "https://github.com/FutabaKen/ChildcareNote#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "eslint": "^7.31.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-vue": "^7.14.0"
+  }
 }
